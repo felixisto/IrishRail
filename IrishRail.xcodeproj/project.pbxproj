@@ -1,0 +1,909 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		309774A8E8736776E275CB54 /* Pods_IrishRailTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DCB794948659D170D368234 /* Pods_IrishRailTests.framework */; };
+		7168DD9D97F5AC21C9E1C30A /* Pods_IrishRail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E5CA3526324D4A04DDFDE1A /* Pods_IrishRail.framework */; };
+		990360BC26A9CD9000ACB765 /* SWXMLHash+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990360BB26A9CD9000ACB765 /* SWXMLHash+Helpers.swift */; };
+		9930AC8826A9A3AC006CC6D7 /* IrishRailApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9930AC8726A9A3AC006CC6D7 /* IrishRailApp.swift */; };
+		9930AC8A26A9A3AC006CC6D7 /* PrimaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9930AC8926A9A3AC006CC6D7 /* PrimaryView.swift */; };
+		9930AC8C26A9A3AD006CC6D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9930AC8B26A9A3AD006CC6D7 /* Assets.xcassets */; };
+		9930AC8F26A9A3AD006CC6D7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9930AC8E26A9A3AD006CC6D7 /* Preview Assets.xcassets */; };
+		9930AC9F26A9A3AD006CC6D7 /* IrishRailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9930AC9E26A9A3AD006CC6D7 /* IrishRailTests.swift */; };
+		9930ACAA26A9A3AD006CC6D7 /* IrishRailUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9930ACA926A9A3AD006CC6D7 /* IrishRailUITests.swift */; };
+		9936904826AADC5B00592ED3 /* RailStationsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9936904726AADC5B00592ED3 /* RailStationsRepository.swift */; };
+		9956710F26AB2AA50035F35F /* RecentlySearchedStationsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9956710E26AB2AA50035F35F /* RecentlySearchedStationsRepository.swift */; };
+		9956711126AB2F1A0035F35F /* StationScheduleCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9956711026AB2F1A0035F35F /* StationScheduleCellViewModel.swift */; };
+		9956711426AB31C00035F35F /* NotificationsReminderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9956711326AB31C00035F35F /* NotificationsReminderManager.swift */; };
+		9956711626AB35210035F35F /* NotificationsReminderStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9956711526AB35210035F35F /* NotificationsReminderStorage.swift */; };
+		9956711826AB38840035F35F /* AtomicValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9956711726AB38840035F35F /* AtomicValue.swift */; };
+		996D62B626AAEB4F00EB0076 /* StationScheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D62B526AAEB4F00EB0076 /* StationScheduleCell.swift */; };
+		996D62B826AAF5F100EB0076 /* NavigationLazyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D62B726AAF5F100EB0076 /* NavigationLazyView.swift */; };
+		996D62BA26AB039300EB0076 /* SwiftUIView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996D62B926AB039300EB0076 /* SwiftUIView+Helpers.swift */; };
+		997245C926AACB28008D69CC /* StationSuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997245C826AACB28008D69CC /* StationSuggestion.swift */; };
+		99D4078926AAA8FF00233CA6 /* RailStationDataParsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D4078826AAA8FF00233CA6 /* RailStationDataParsingTests.swift */; };
+		99D4078B26AAA96C00233CA6 /* IrishRailSampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D4078A26AAA96C00233CA6 /* IrishRailSampleData.swift */; };
+		99D4078D26AAAB3900233CA6 /* AllStationsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D4078C26AAAB3900233CA6 /* AllStationsParser.swift */; };
+		99D4078F26AAAB4300233CA6 /* TrainMovementsParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D4078E26AAAB4300233CA6 /* TrainMovementsParser.swift */; };
+		99D4079126AAAB4B00233CA6 /* StationDataTrainCodesParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D4079026AAAB4B00233CA6 /* StationDataTrainCodesParser.swift */; };
+		99D4079526AAAECB00233CA6 /* PrimaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D4079426AAAECB00233CA6 /* PrimaryViewModel.swift */; };
+		99D4079726AAAEF400233CA6 /* StationScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D4079626AAAEF400233CA6 /* StationScheduleView.swift */; };
+		99D4079926AAAF1400233CA6 /* StationScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D4079826AAAF1400233CA6 /* StationScheduleViewModel.swift */; };
+		99D4079B26AAB93C00233CA6 /* StationStopTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99D4079A26AAB93C00233CA6 /* StationStopTextField.swift */; };
+		99ECC5D426A9FF6E00F024A7 /* RailStationDataParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECC5D326A9FF6E00F024A7 /* RailStationDataParsing.swift */; };
+		99ECC5D726A9FF8300F024A7 /* RailStationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECC5D626A9FF8300F024A7 /* RailStationModel.swift */; };
+		99ECC5D926A9FFBA00F024A7 /* RailStationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECC5D826A9FFBA00F024A7 /* RailStationAPI.swift */; };
+		99ECC5DB26AA006B00F024A7 /* String+URLEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECC5DA26AA006B00F024A7 /* String+URLEncoding.swift */; };
+		99ECC5DD26AA055C00F024A7 /* RailStationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECC5DC26AA055C00F024A7 /* RailStationRequest.swift */; };
+		99ECC5DF26AA05B100F024A7 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECC5DE26AA05B100F024A7 /* NetworkSession.swift */; };
+		99ECC5E126AA05F600F024A7 /* RailStationNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECC5E026AA05F600F024A7 /* RailStationNetworkService.swift */; };
+		99ECC5E326AA0DD000F024A7 /* AppComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99ECC5E226AA0DD000F024A7 /* AppComponents.swift */; };
+		BDB62B2790EF50D9C9A70DB2 /* Pods_IrishRail_IrishRailUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E90F06DF7FA665490201FC5 /* Pods_IrishRail_IrishRailUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9930AC9B26A9A3AD006CC6D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9930AC7C26A9A3AC006CC6D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9930AC8326A9A3AC006CC6D7;
+			remoteInfo = IrishRail;
+		};
+		9930ACA626A9A3AD006CC6D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9930AC7C26A9A3AC006CC6D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9930AC8326A9A3AC006CC6D7;
+			remoteInfo = IrishRail;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1E5CA3526324D4A04DDFDE1A /* Pods_IrishRail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IrishRail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		25A19106D3F8EEBF94468654 /* Pods-IrishRail.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IrishRail.debug.xcconfig"; path = "Target Support Files/Pods-IrishRail/Pods-IrishRail.debug.xcconfig"; sourceTree = "<group>"; };
+		2AA2F8F72BC40AAE47191ED8 /* Pods-IrishRailTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IrishRailTests.release.xcconfig"; path = "Target Support Files/Pods-IrishRailTests/Pods-IrishRailTests.release.xcconfig"; sourceTree = "<group>"; };
+		2DCB794948659D170D368234 /* Pods_IrishRailTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IrishRailTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F1139EA494E0D0B60589264 /* Pods-IrishRail-IrishRailUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IrishRail-IrishRailUITests.release.xcconfig"; path = "Target Support Files/Pods-IrishRail-IrishRailUITests/Pods-IrishRail-IrishRailUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8E90F06DF7FA665490201FC5 /* Pods_IrishRail_IrishRailUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IrishRail_IrishRailUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		990360BB26A9CD9000ACB765 /* SWXMLHash+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SWXMLHash+Helpers.swift"; sourceTree = "<group>"; };
+		9930AC8426A9A3AC006CC6D7 /* IrishRail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IrishRail.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9930AC8726A9A3AC006CC6D7 /* IrishRailApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrishRailApp.swift; sourceTree = "<group>"; };
+		9930AC8926A9A3AC006CC6D7 /* PrimaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryView.swift; sourceTree = "<group>"; };
+		9930AC8B26A9A3AD006CC6D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9930AC8E26A9A3AD006CC6D7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9930AC9526A9A3AD006CC6D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9930AC9A26A9A3AD006CC6D7 /* IrishRailTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IrishRailTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9930AC9E26A9A3AD006CC6D7 /* IrishRailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrishRailTests.swift; sourceTree = "<group>"; };
+		9930ACA026A9A3AD006CC6D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9930ACA526A9A3AD006CC6D7 /* IrishRailUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IrishRailUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9930ACA926A9A3AD006CC6D7 /* IrishRailUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrishRailUITests.swift; sourceTree = "<group>"; };
+		9930ACAB26A9A3AD006CC6D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9936904726AADC5B00592ED3 /* RailStationsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailStationsRepository.swift; sourceTree = "<group>"; };
+		9956710E26AB2AA50035F35F /* RecentlySearchedStationsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlySearchedStationsRepository.swift; sourceTree = "<group>"; };
+		9956711026AB2F1A0035F35F /* StationScheduleCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationScheduleCellViewModel.swift; sourceTree = "<group>"; };
+		9956711326AB31C00035F35F /* NotificationsReminderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsReminderManager.swift; sourceTree = "<group>"; };
+		9956711526AB35210035F35F /* NotificationsReminderStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsReminderStorage.swift; sourceTree = "<group>"; };
+		9956711726AB38840035F35F /* AtomicValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicValue.swift; sourceTree = "<group>"; };
+		996D62B526AAEB4F00EB0076 /* StationScheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationScheduleCell.swift; sourceTree = "<group>"; };
+		996D62B726AAF5F100EB0076 /* NavigationLazyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLazyView.swift; sourceTree = "<group>"; };
+		996D62B926AB039300EB0076 /* SwiftUIView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUIView+Helpers.swift"; sourceTree = "<group>"; };
+		997245C826AACB28008D69CC /* StationSuggestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationSuggestion.swift; sourceTree = "<group>"; };
+		99D4078826AAA8FF00233CA6 /* RailStationDataParsingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailStationDataParsingTests.swift; sourceTree = "<group>"; };
+		99D4078A26AAA96C00233CA6 /* IrishRailSampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrishRailSampleData.swift; sourceTree = "<group>"; };
+		99D4078C26AAAB3900233CA6 /* AllStationsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStationsParser.swift; sourceTree = "<group>"; };
+		99D4078E26AAAB4300233CA6 /* TrainMovementsParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainMovementsParser.swift; sourceTree = "<group>"; };
+		99D4079026AAAB4B00233CA6 /* StationDataTrainCodesParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDataTrainCodesParser.swift; sourceTree = "<group>"; };
+		99D4079426AAAECB00233CA6 /* PrimaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryViewModel.swift; sourceTree = "<group>"; };
+		99D4079626AAAEF400233CA6 /* StationScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationScheduleView.swift; sourceTree = "<group>"; };
+		99D4079826AAAF1400233CA6 /* StationScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationScheduleViewModel.swift; sourceTree = "<group>"; };
+		99D4079A26AAB93C00233CA6 /* StationStopTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationStopTextField.swift; sourceTree = "<group>"; };
+		99ECC5D326A9FF6E00F024A7 /* RailStationDataParsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailStationDataParsing.swift; sourceTree = "<group>"; };
+		99ECC5D626A9FF8300F024A7 /* RailStationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailStationModel.swift; sourceTree = "<group>"; };
+		99ECC5D826A9FFBA00F024A7 /* RailStationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailStationAPI.swift; sourceTree = "<group>"; };
+		99ECC5DA26AA006B00F024A7 /* String+URLEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+URLEncoding.swift"; sourceTree = "<group>"; };
+		99ECC5DC26AA055C00F024A7 /* RailStationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailStationRequest.swift; sourceTree = "<group>"; };
+		99ECC5DE26AA05B100F024A7 /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
+		99ECC5E026AA05F600F024A7 /* RailStationNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RailStationNetworkService.swift; sourceTree = "<group>"; };
+		99ECC5E226AA0DD000F024A7 /* AppComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppComponents.swift; sourceTree = "<group>"; };
+		A763FB01B59CC69233A40B8F /* Pods-IrishRail.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IrishRail.release.xcconfig"; path = "Target Support Files/Pods-IrishRail/Pods-IrishRail.release.xcconfig"; sourceTree = "<group>"; };
+		AC95C8618C09BE534704D361 /* Pods-IrishRailTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IrishRailTests.debug.xcconfig"; path = "Target Support Files/Pods-IrishRailTests/Pods-IrishRailTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DE2D792B279F9AB4D68AC7F5 /* Pods-IrishRail-IrishRailUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IrishRail-IrishRailUITests.debug.xcconfig"; path = "Target Support Files/Pods-IrishRail-IrishRailUITests/Pods-IrishRail-IrishRailUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9930AC8126A9A3AC006CC6D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7168DD9D97F5AC21C9E1C30A /* Pods_IrishRail.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9930AC9726A9A3AD006CC6D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				309774A8E8736776E275CB54 /* Pods_IrishRailTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9930ACA226A9A3AD006CC6D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDB62B2790EF50D9C9A70DB2 /* Pods_IrishRail_IrishRailUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		75B753B186A166BC35486CD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1E5CA3526324D4A04DDFDE1A /* Pods_IrishRail.framework */,
+				8E90F06DF7FA665490201FC5 /* Pods_IrishRail_IrishRailUITests.framework */,
+				2DCB794948659D170D368234 /* Pods_IrishRailTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9930AC7B26A9A3AC006CC6D7 = {
+			isa = PBXGroup;
+			children = (
+				9930AC8626A9A3AC006CC6D7 /* IrishRail */,
+				9930AC9D26A9A3AD006CC6D7 /* IrishRailTests */,
+				9930ACA826A9A3AD006CC6D7 /* IrishRailUITests */,
+				9930AC8526A9A3AC006CC6D7 /* Products */,
+				9AD8A67A8CACCA94D56E3656 /* Pods */,
+				75B753B186A166BC35486CD9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9930AC8526A9A3AC006CC6D7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9930AC8426A9A3AC006CC6D7 /* IrishRail.app */,
+				9930AC9A26A9A3AD006CC6D7 /* IrishRailTests.xctest */,
+				9930ACA526A9A3AD006CC6D7 /* IrishRailUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9930AC8626A9A3AC006CC6D7 /* IrishRail */ = {
+			isa = PBXGroup;
+			children = (
+				9930AC8726A9A3AC006CC6D7 /* IrishRailApp.swift */,
+				99ECC5E226AA0DD000F024A7 /* AppComponents.swift */,
+				99D4079226AAACA800233CA6 /* View */,
+				99D4079326AAACB200233CA6 /* ViewModel */,
+				99ECC5D526A9FF7800F024A7 /* Model */,
+				9936904626AADC3D00592ED3 /* Repository */,
+				99ECC5D026A9FF3900F024A7 /* Network */,
+				9956711226AB31530035F35F /* Notifications */,
+				99ECC5D226A9FF4700F024A7 /* Parser */,
+				99ECC5D126A9FF4300F024A7 /* Utilities */,
+				9930AC8B26A9A3AD006CC6D7 /* Assets.xcassets */,
+				9930AC9526A9A3AD006CC6D7 /* Info.plist */,
+				9930AC8D26A9A3AD006CC6D7 /* Preview Content */,
+			);
+			path = IrishRail;
+			sourceTree = "<group>";
+		};
+		9930AC8D26A9A3AD006CC6D7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				9930AC8E26A9A3AD006CC6D7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9930AC9D26A9A3AD006CC6D7 /* IrishRailTests */ = {
+			isa = PBXGroup;
+			children = (
+				9930AC9E26A9A3AD006CC6D7 /* IrishRailTests.swift */,
+				99D4078A26AAA96C00233CA6 /* IrishRailSampleData.swift */,
+				99D4078826AAA8FF00233CA6 /* RailStationDataParsingTests.swift */,
+				9930ACA026A9A3AD006CC6D7 /* Info.plist */,
+			);
+			path = IrishRailTests;
+			sourceTree = "<group>";
+		};
+		9930ACA826A9A3AD006CC6D7 /* IrishRailUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9930ACA926A9A3AD006CC6D7 /* IrishRailUITests.swift */,
+				9930ACAB26A9A3AD006CC6D7 /* Info.plist */,
+			);
+			path = IrishRailUITests;
+			sourceTree = "<group>";
+		};
+		9936904626AADC3D00592ED3 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				9936904726AADC5B00592ED3 /* RailStationsRepository.swift */,
+				9956710E26AB2AA50035F35F /* RecentlySearchedStationsRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		9956711226AB31530035F35F /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				9956711326AB31C00035F35F /* NotificationsReminderManager.swift */,
+				9956711526AB35210035F35F /* NotificationsReminderStorage.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		99D4079226AAACA800233CA6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9930AC8926A9A3AC006CC6D7 /* PrimaryView.swift */,
+				99D4079626AAAEF400233CA6 /* StationScheduleView.swift */,
+				996D62B526AAEB4F00EB0076 /* StationScheduleCell.swift */,
+				99D4079A26AAB93C00233CA6 /* StationStopTextField.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		99D4079326AAACB200233CA6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				99D4079426AAAECB00233CA6 /* PrimaryViewModel.swift */,
+				99D4079826AAAF1400233CA6 /* StationScheduleViewModel.swift */,
+				9956711026AB2F1A0035F35F /* StationScheduleCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		99ECC5D026A9FF3900F024A7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				99ECC5DE26AA05B100F024A7 /* NetworkSession.swift */,
+				99ECC5D826A9FFBA00F024A7 /* RailStationAPI.swift */,
+				99ECC5DC26AA055C00F024A7 /* RailStationRequest.swift */,
+				99ECC5E026AA05F600F024A7 /* RailStationNetworkService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		99ECC5D126A9FF4300F024A7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				990360BB26A9CD9000ACB765 /* SWXMLHash+Helpers.swift */,
+				99ECC5DA26AA006B00F024A7 /* String+URLEncoding.swift */,
+				997245C826AACB28008D69CC /* StationSuggestion.swift */,
+				996D62B726AAF5F100EB0076 /* NavigationLazyView.swift */,
+				996D62B926AB039300EB0076 /* SwiftUIView+Helpers.swift */,
+				9956711726AB38840035F35F /* AtomicValue.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		99ECC5D226A9FF4700F024A7 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				99ECC5D326A9FF6E00F024A7 /* RailStationDataParsing.swift */,
+				99D4078C26AAAB3900233CA6 /* AllStationsParser.swift */,
+				99D4079026AAAB4B00233CA6 /* StationDataTrainCodesParser.swift */,
+				99D4078E26AAAB4300233CA6 /* TrainMovementsParser.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		99ECC5D526A9FF7800F024A7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				99ECC5D626A9FF8300F024A7 /* RailStationModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9AD8A67A8CACCA94D56E3656 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				25A19106D3F8EEBF94468654 /* Pods-IrishRail.debug.xcconfig */,
+				A763FB01B59CC69233A40B8F /* Pods-IrishRail.release.xcconfig */,
+				DE2D792B279F9AB4D68AC7F5 /* Pods-IrishRail-IrishRailUITests.debug.xcconfig */,
+				7F1139EA494E0D0B60589264 /* Pods-IrishRail-IrishRailUITests.release.xcconfig */,
+				AC95C8618C09BE534704D361 /* Pods-IrishRailTests.debug.xcconfig */,
+				2AA2F8F72BC40AAE47191ED8 /* Pods-IrishRailTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9930AC8326A9A3AC006CC6D7 /* IrishRail */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9930ACAE26A9A3AD006CC6D7 /* Build configuration list for PBXNativeTarget "IrishRail" */;
+			buildPhases = (
+				D061E7A7EEFE7848F8760014 /* [CP] Check Pods Manifest.lock */,
+				9930AC8026A9A3AC006CC6D7 /* Sources */,
+				9930AC8126A9A3AC006CC6D7 /* Frameworks */,
+				9930AC8226A9A3AC006CC6D7 /* Resources */,
+				813D853F0158A1F5724A9484 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IrishRail;
+			productName = IrishRail;
+			productReference = 9930AC8426A9A3AC006CC6D7 /* IrishRail.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9930AC9926A9A3AD006CC6D7 /* IrishRailTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9930ACB126A9A3AD006CC6D7 /* Build configuration list for PBXNativeTarget "IrishRailTests" */;
+			buildPhases = (
+				3425B7A6550EA871D2758D32 /* [CP] Check Pods Manifest.lock */,
+				9930AC9626A9A3AD006CC6D7 /* Sources */,
+				9930AC9726A9A3AD006CC6D7 /* Frameworks */,
+				9930AC9826A9A3AD006CC6D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9930AC9C26A9A3AD006CC6D7 /* PBXTargetDependency */,
+			);
+			name = IrishRailTests;
+			productName = IrishRailTests;
+			productReference = 9930AC9A26A9A3AD006CC6D7 /* IrishRailTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9930ACA426A9A3AD006CC6D7 /* IrishRailUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9930ACB426A9A3AD006CC6D7 /* Build configuration list for PBXNativeTarget "IrishRailUITests" */;
+			buildPhases = (
+				67DC47CA375C3372FA18DAD2 /* [CP] Check Pods Manifest.lock */,
+				9930ACA126A9A3AD006CC6D7 /* Sources */,
+				9930ACA226A9A3AD006CC6D7 /* Frameworks */,
+				9930ACA326A9A3AD006CC6D7 /* Resources */,
+				405E309754A724EA45FC9156 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9930ACA726A9A3AD006CC6D7 /* PBXTargetDependency */,
+			);
+			name = IrishRailUITests;
+			productName = IrishRailUITests;
+			productReference = 9930ACA526A9A3AD006CC6D7 /* IrishRailUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9930AC7C26A9A3AC006CC6D7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					9930AC8326A9A3AC006CC6D7 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					9930AC9926A9A3AD006CC6D7 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 9930AC8326A9A3AC006CC6D7;
+					};
+					9930ACA426A9A3AD006CC6D7 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 9930AC8326A9A3AC006CC6D7;
+					};
+				};
+			};
+			buildConfigurationList = 9930AC7F26A9A3AC006CC6D7 /* Build configuration list for PBXProject "IrishRail" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9930AC7B26A9A3AC006CC6D7;
+			productRefGroup = 9930AC8526A9A3AC006CC6D7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9930AC8326A9A3AC006CC6D7 /* IrishRail */,
+				9930AC9926A9A3AD006CC6D7 /* IrishRailTests */,
+				9930ACA426A9A3AD006CC6D7 /* IrishRailUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9930AC8226A9A3AC006CC6D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9930AC8F26A9A3AD006CC6D7 /* Preview Assets.xcassets in Resources */,
+				9930AC8C26A9A3AD006CC6D7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9930AC9826A9A3AD006CC6D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9930ACA326A9A3AD006CC6D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3425B7A6550EA871D2758D32 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IrishRailTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		405E309754A724EA45FC9156 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IrishRail-IrishRailUITests/Pods-IrishRail-IrishRailUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IrishRail-IrishRailUITests/Pods-IrishRail-IrishRailUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IrishRail-IrishRailUITests/Pods-IrishRail-IrishRailUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		67DC47CA375C3372FA18DAD2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IrishRail-IrishRailUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		813D853F0158A1F5724A9484 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IrishRail/Pods-IrishRail-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IrishRail/Pods-IrishRail-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IrishRail/Pods-IrishRail-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D061E7A7EEFE7848F8760014 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IrishRail-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9930AC8026A9A3AC006CC6D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99ECC5DB26AA006B00F024A7 /* String+URLEncoding.swift in Sources */,
+				99D4079126AAAB4B00233CA6 /* StationDataTrainCodesParser.swift in Sources */,
+				99ECC5E126AA05F600F024A7 /* RailStationNetworkService.swift in Sources */,
+				99ECC5DF26AA05B100F024A7 /* NetworkSession.swift in Sources */,
+				9956711626AB35210035F35F /* NotificationsReminderStorage.swift in Sources */,
+				9956711426AB31C00035F35F /* NotificationsReminderManager.swift in Sources */,
+				9930AC8A26A9A3AC006CC6D7 /* PrimaryView.swift in Sources */,
+				996D62B626AAEB4F00EB0076 /* StationScheduleCell.swift in Sources */,
+				99ECC5D926A9FFBA00F024A7 /* RailStationAPI.swift in Sources */,
+				99ECC5D726A9FF8300F024A7 /* RailStationModel.swift in Sources */,
+				99ECC5D426A9FF6E00F024A7 /* RailStationDataParsing.swift in Sources */,
+				990360BC26A9CD9000ACB765 /* SWXMLHash+Helpers.swift in Sources */,
+				99ECC5E326AA0DD000F024A7 /* AppComponents.swift in Sources */,
+				9956711126AB2F1A0035F35F /* StationScheduleCellViewModel.swift in Sources */,
+				99D4079526AAAECB00233CA6 /* PrimaryViewModel.swift in Sources */,
+				99D4078D26AAAB3900233CA6 /* AllStationsParser.swift in Sources */,
+				9956710F26AB2AA50035F35F /* RecentlySearchedStationsRepository.swift in Sources */,
+				9936904826AADC5B00592ED3 /* RailStationsRepository.swift in Sources */,
+				9956711826AB38840035F35F /* AtomicValue.swift in Sources */,
+				99ECC5DD26AA055C00F024A7 /* RailStationRequest.swift in Sources */,
+				996D62BA26AB039300EB0076 /* SwiftUIView+Helpers.swift in Sources */,
+				99D4079B26AAB93C00233CA6 /* StationStopTextField.swift in Sources */,
+				996D62B826AAF5F100EB0076 /* NavigationLazyView.swift in Sources */,
+				99D4079926AAAF1400233CA6 /* StationScheduleViewModel.swift in Sources */,
+				9930AC8826A9A3AC006CC6D7 /* IrishRailApp.swift in Sources */,
+				997245C926AACB28008D69CC /* StationSuggestion.swift in Sources */,
+				99D4079726AAAEF400233CA6 /* StationScheduleView.swift in Sources */,
+				99D4078F26AAAB4300233CA6 /* TrainMovementsParser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9930AC9626A9A3AD006CC6D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				99D4078B26AAA96C00233CA6 /* IrishRailSampleData.swift in Sources */,
+				9930AC9F26A9A3AD006CC6D7 /* IrishRailTests.swift in Sources */,
+				99D4078926AAA8FF00233CA6 /* RailStationDataParsingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9930ACA126A9A3AD006CC6D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9930ACAA26A9A3AD006CC6D7 /* IrishRailUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9930AC9C26A9A3AD006CC6D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9930AC8326A9A3AC006CC6D7 /* IrishRail */;
+			targetProxy = 9930AC9B26A9A3AD006CC6D7 /* PBXContainerItemProxy */;
+		};
+		9930ACA726A9A3AD006CC6D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9930AC8326A9A3AC006CC6D7 /* IrishRail */;
+			targetProxy = 9930ACA626A9A3AD006CC6D7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		9930ACAC26A9A3AD006CC6D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9930ACAD26A9A3AD006CC6D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9930ACAF26A9A3AD006CC6D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25A19106D3F8EEBF94468654 /* Pods-IrishRail.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"IrishRail/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = IrishRail/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.IrishRail;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9930ACB026A9A3AD006CC6D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A763FB01B59CC69233A40B8F /* Pods-IrishRail.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"IrishRail/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = IrishRail/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.IrishRail;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9930ACB226A9A3AD006CC6D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC95C8618C09BE534704D361 /* Pods-IrishRailTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = IrishRailTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.IrishRailTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IrishRail.app/IrishRail";
+			};
+			name = Debug;
+		};
+		9930ACB326A9A3AD006CC6D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AA2F8F72BC40AAE47191ED8 /* Pods-IrishRailTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = IrishRailTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.IrishRailTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IrishRail.app/IrishRail";
+			};
+			name = Release;
+		};
+		9930ACB526A9A3AD006CC6D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE2D792B279F9AB4D68AC7F5 /* Pods-IrishRail-IrishRailUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = IrishRailUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.IrishRailUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = IrishRail;
+			};
+			name = Debug;
+		};
+		9930ACB626A9A3AD006CC6D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F1139EA494E0D0B60589264 /* Pods-IrishRail-IrishRailUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = IrishRailUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = test.IrishRailUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = IrishRail;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9930AC7F26A9A3AC006CC6D7 /* Build configuration list for PBXProject "IrishRail" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9930ACAC26A9A3AD006CC6D7 /* Debug */,
+				9930ACAD26A9A3AD006CC6D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9930ACAE26A9A3AD006CC6D7 /* Build configuration list for PBXNativeTarget "IrishRail" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9930ACAF26A9A3AD006CC6D7 /* Debug */,
+				9930ACB026A9A3AD006CC6D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9930ACB126A9A3AD006CC6D7 /* Build configuration list for PBXNativeTarget "IrishRailTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9930ACB226A9A3AD006CC6D7 /* Debug */,
+				9930ACB326A9A3AD006CC6D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9930ACB426A9A3AD006CC6D7 /* Build configuration list for PBXNativeTarget "IrishRailUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9930ACB526A9A3AD006CC6D7 /* Debug */,
+				9930ACB626A9A3AD006CC6D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9930AC7C26A9A3AC006CC6D7 /* Project object */;
+}
