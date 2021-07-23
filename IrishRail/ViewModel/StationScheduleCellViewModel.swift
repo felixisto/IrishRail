@@ -14,9 +14,15 @@ class StationScheduleCellViewModel: ObservableObject {
     let model: RailStationTrainSchedule
     
     @Published var isNotificationScheduled: Bool
-    @Published var isNotificationPermissionDenied = false
+    var errorAlertMessage: String?
     
-    @Published var showNotificationAlert = false
+    @Published var showNotificationAlert = false {
+        didSet {
+            if oldValue {
+                self.errorAlertMessage = nil
+            }
+        }
+    }
     
     @Injected var notificationsManager: NotificationsReminderManager
     
@@ -43,15 +49,20 @@ class StationScheduleCellViewModel: ObservableObject {
                     return
                 }
                 
-                strongSelf.isNotificationPermissionDenied = !granted
-                
                 if !granted {
+                    strongSelf.errorAlertMessage = "Permission not granted for notifications!"
                     strongSelf.showNotificationAlert = true
                     return
                 }
                 
                 if !strongSelf.isNotificationScheduled {
-                    strongSelf.notificationsManager.scheduleReminder(forSchedule: strongSelf.model)
+                    let result = strongSelf.notificationsManager.scheduleReminder(forSchedule: strongSelf.model)
+                    
+                    if !result {
+                        strongSelf.errorAlertMessage = "Train already departed!"
+                        strongSelf.showNotificationAlert = true
+                        return
+                    }
                 } else {
                     strongSelf.notificationsManager.unscheduleReminder(forSchedule: strongSelf.model)
                 }

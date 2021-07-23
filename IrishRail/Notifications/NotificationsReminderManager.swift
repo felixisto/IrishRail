@@ -12,7 +12,7 @@ protocol NotificationsReminderManager: AnyObject {
     func askForLocalNotificationsPermission(completion: @escaping (Bool)->Void)
     
     func isReminderScheduled(forSchedule schedule: RailStationTrainSchedule) -> Bool
-    func scheduleReminder(forSchedule schedule: RailStationTrainSchedule)
+    func scheduleReminder(forSchedule schedule: RailStationTrainSchedule) -> Bool
     func unscheduleReminder(forSchedule schedule: RailStationTrainSchedule)
 }
 
@@ -44,16 +44,18 @@ class NotificationsReminderManagerImpl: NotificationsReminderManager {
         return storage.isReminderScheduled(forSchedule: schedule)
     }
     
-    func scheduleReminder(forSchedule schedule: RailStationTrainSchedule) {
+    func scheduleReminder(forSchedule schedule: RailStationTrainSchedule) -> Bool {
         if !hasPermission.value {
-            return
+            return false
         }
         
         guard let newReminder = storage.saveReminder(forSchedule: schedule) else {
-            return
+            return false
         }
         
         scheduleNotification(for: newReminder)
+        
+        return true
     }
     
     func unscheduleReminder(forSchedule schedule: RailStationTrainSchedule) {
@@ -75,7 +77,7 @@ class NotificationsReminderManagerImpl: NotificationsReminderManager {
     private func scheduleNotification(for reminder: NotificationReminder) {
         let timeUntilExpiration = reminder.timeUntilExpiration
         
-        if timeUntilExpiration <= 0 {
+        if timeUntilExpiration <= 1 {
             return
         }
         
@@ -89,9 +91,16 @@ class NotificationsReminderManagerImpl: NotificationsReminderManager {
         
         let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
         
+        weak var weakSelf = self
+        
         center.add(request) { error in
             if let err = error {
                 print("Local notification failed to be scheduled, error: \(err)")
+            } else {
+                // After notification is display, clear it out
+                DispatchQueue.global().asyncAfter(deadline: .now() + timeUntilExpiration) {
+                    weakSelf?.storage.deleteReminder(reminder)
+                }
             }
         }
         

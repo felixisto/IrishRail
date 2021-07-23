@@ -13,6 +13,7 @@ protocol NotificationsReminderStorage {
     func isReminderScheduled(forSchedule schedule: RailStationTrainSchedule) -> Bool
     func saveReminder(forSchedule schedule: RailStationTrainSchedule) -> NotificationReminder?
     func deleteReminder(forSchedule schedule: RailStationTrainSchedule) -> NotificationReminder?
+    func deleteReminder(_ other: NotificationReminder)
     
     func deleteExpiredReminders()
 }
@@ -90,6 +91,18 @@ class NotificationsReminderStorageImpl: NotificationsReminderStorage {
         }
         
         return other
+    }
+    
+    func deleteReminder(_ other: NotificationReminder) {
+        queue.sync {
+            var newReminders = self.reminders
+            
+            newReminders.removeAll { reminder in
+                reminder == other
+            }
+            
+            self.reminders = newReminders
+        }
     }
     
     func deleteExpiredReminders() {

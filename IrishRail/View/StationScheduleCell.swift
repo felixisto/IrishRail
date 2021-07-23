@@ -28,15 +28,15 @@ struct StationScheduleCell: View {
         }
         .padding()
         .alert(isPresented: $viewModel.showNotificationAlert) {
-            if !viewModel.isNotificationPermissionDenied {
+            if let errorMessage = viewModel.errorAlertMessage {
+                return Alert(title: Text(errorMessage))
+            } else {
                 return Alert(title: Text("Notification"),
                       message: !viewModel.isNotificationScheduled ? Text("Schedule reminder notification 15 minutes before departure?") : Text("Unschedule reminder notification?"),
                       primaryButton: .default(Text("Yes"), action: {
                         viewModel.scheduleOrUnscheduleNotification()
                       }),
                       secondaryButton: .default(Text("No")))
-            } else {
-                return Alert(title: Text("Permission not granted!"))
             }
         }
     }
