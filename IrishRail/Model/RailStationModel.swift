@@ -32,7 +32,7 @@ struct RailStation: Identifiable, Hashable {
 struct RailStationMovement: Identifiable, Hashable {
     struct Stop: Identifiable, Hashable {
         var id: String {
-            "\(locationOrder). \(name)"
+            "\(locationOrder). \(name) \(trainCode)"
         }
         
         var name: String = ""
